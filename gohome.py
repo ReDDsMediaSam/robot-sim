@@ -23,7 +23,7 @@ def turn (speed, seconds):
     R.motors[0].m0.power = 0
     R.motors[0].m1.power = 0
 
-def go_to(arena_marker_number, ANGLE_SEARCH=4):
+def go_to_home(arena_marker_number, ANGLE_SEARCH=4):
     running = True
     while running:
         markers = R.see()
@@ -51,8 +51,4 @@ d = {
 }
 
 my_zone = d[R.zone]
-go_to (my_zone[0])
-
-
-
-
+go_to_home (my_zone[0])

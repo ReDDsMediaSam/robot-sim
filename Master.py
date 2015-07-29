@@ -6,4 +6,4 @@ R = Robot()
 # Your code goes here
 setup()
 while True:
-    arm_movement()
+    go_to_arena
