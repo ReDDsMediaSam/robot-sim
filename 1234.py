@@ -1,5 +1,6 @@
 from sr.robot import *
-from go_home import *
+
+import go_home
 
 R = Robot()
 # Your code goes here

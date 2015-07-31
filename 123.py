@@ -2,7 +2,7 @@ from sr.robot import *
 import time
 
 TURN_TIME = 4
-TURN_SPEED = 1
+TURN_SPEED = 40
 
 
 R = Robot()
@@ -31,7 +31,7 @@ def go_to_home(arena_marker_number, ANGLE_SEARCH=4):
             print "Marker angle is", m.rot_y
             print "Angle seaching is", ANGLE_SEARCH
             if m.info.marker_type == MARKER_ARENA and m.info.offset == arena_marker_number and m.rot_y >=-ANGLE_SEARCH and m.rot_y <=ANGLE_SEARCH:
-                drive (70, 0.2)
+                drive (70, 1)
                 if m.rot_y <-ANGLE_SEARCH:
                     turn(TURN_SPEED, TURN_TIME)
                 elif m.rot_y >ANGLE_SEARCH:
@@ -41,7 +41,7 @@ def go_to_home(arena_marker_number, ANGLE_SEARCH=4):
                 R.motors[0].m0.power = 0
                 R.motors[0].m1.power = 0
                 running = False
-R.zone
+"""R.zone
 
 d = {
 0: [0, 1, 27, 26]
@@ -50,5 +50,5 @@ d = {
 3: [19, 20, 21, 22]
 }
 
-my_zone = d[R.zone]
-go_to_home (my_zone[0])
+my_zone = d[R.zone]"""
+go_to_home (2)
